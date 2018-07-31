@@ -6,7 +6,8 @@
 //  Copyright © 2018 Kyla . All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <Foundation/Foundation.h> 
+
 
 @interface InputCollector : NSObject
 -(NSString *)inputForPrompt:(NSString *)promptString;

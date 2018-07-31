@@ -12,14 +12,16 @@
 
 -(NSString *)inputForPrompt:(NSString *)promptString {
     
-    NSLog(@"The menu: What would you like do next?\n new - Create a new contact\n list - List all contacts\n quit - Exit Application\n");
+  
+    NSLog(@"%@", promptString);
     
     char inputChar[255];
     
     fgets(inputChar, 255, stdin);
     
     NSString *inputString = [NSString stringWithUTF8String:inputChar];
-   
+    inputString = [inputString stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    
     return inputString;
  
 }
